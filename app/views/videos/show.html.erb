@@ -1,0 +1,16 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= render @video %>
+
+    <%= button_to "Transcribe", video_transcribe_path(@video), method: :post, form_class: "inline-block", class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this video", edit_video_path(@video), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Back to videos", videos_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block">
+      <%= button_to "Destroy this video", @video, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium bg-red-500 text-white" %>
+    </div>
+  </div>
+</div>

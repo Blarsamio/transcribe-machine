@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  library_id: MyString
+  guid: MyString
+  title: MyString
+  captions: false
+
+two:
+  library_id: MyString
+  guid: MyString
+  title: MyString
+  captions: false
